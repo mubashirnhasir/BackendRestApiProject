@@ -5,7 +5,7 @@ module.exports = async (request, response) => {
     if (request.url === "/api/todo" && request.method === "POST") {
         try {
             let body = await requestBodyParser(request)
-
+            // TODO
             const id = Crypto.randomUUID()
             body.id = id;
             console.log(body.id)
